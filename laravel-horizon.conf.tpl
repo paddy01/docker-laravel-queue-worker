@@ -3,7 +3,7 @@ nodaemon=true
 
 [program:laravel-horizon]
 process_name=%(program_name)s_%(process_num)02d
-command=php /var/www/app/artisan horizon
+command=php /var/www/artisan horizon
 autostart=true
 autorestart=true
 numprocs=1
