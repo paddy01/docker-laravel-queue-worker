@@ -1,7 +1,7 @@
-FROM php:7.2-alpine
+FROM php:7.0-alpine
 
 LABEL maintainer="Patrik Forsberg <patrik.forsberg@ip-only.se>" \
-		version.image="v3.1" \
+		version.image="v1.1" \
 		version.php=$PHP_VERSION \
 		description="A supervisor configured to run with laravel artisan queue:work or artisan horizon command"
 
@@ -17,7 +17,7 @@ ENV LARAVEL_HORIZON=false
 RUN docker-php-ext-install pdo pdo_mysql pcntl posix
 
 # Install supervisor
-RUN apk update && apk add -u python$PYTHON_VERSION py$PY_PIP_VERSION-pip
+RUN apk update && apk add -u python py-pip
 RUN pip install supervisor==$SUPERVISOR_VERSION
 
 # Define working directory
