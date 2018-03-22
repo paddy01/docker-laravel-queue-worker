@@ -2,6 +2,9 @@
 
 A docker image for working with queues being monitored by supervisor as recommended by laravel.
 
+## Credits
+This is based upon the work by [ipunktbs/laravel-queue-worker](https://hub.docker.com/r/ipunktbs/laravel-queue-worker/) just somewhat refined for my needs.
+
 ## Environment Configuration
 
 Running with redis you can configure your `QUEUE_CONNECTION` environment variable to match your redis link. In our case the link is called `redis` so the default value will be `redis`.
