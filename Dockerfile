@@ -1,7 +1,7 @@
 FROM php:7.2-alpine
 
 LABEL maintainer="Patrik Forsberg <patrik.forsberg@ip-only.se>" \
-		version.image="v3.1" \
+		version.image="v3.3" \
 		version.php=$PHP_VERSION \
 		description="A supervisor configured to run with laravel artisan queue:work or artisan horizon command"
 
@@ -12,6 +12,7 @@ ENV SUPERVISOR_VERSION=3.3.3
 ENV QUEUE_CONNECTION=redis
 ENV QUEUE_NAME=default
 ENV LARAVEL_HORIZON=false
+ENV LARAVEL_HOME="/var/www"
 
 # Install pdo if you want to use database queue
 RUN docker-php-ext-install pdo pdo_mysql pcntl posix
