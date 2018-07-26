@@ -3,7 +3,7 @@ nodaemon=true
 
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
-command=php %%WWWHOME%%/artisan queue:work %%QUEUE_CONNECTION%% --queue=%%QUEUE_NAME%%
+command=php %%WWWHOME%%/artisan queue:work %%QUEUE_CONNECTION%% --queue=%%QUEUE_NAME%% --sleep=%%SLEEP_TIME%% --tries=%%NUM_RETRIES%%
 autostart=true
 autorestart=true
 numprocs=1

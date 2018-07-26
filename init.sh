@@ -20,6 +20,8 @@ if [ "$LARAVEL_HORIZON" = false ]; then
 	sed -e "s~%%QUEUE_CONNECTION%%~$QUEUE_CONNECTION~" \
 		-e "s~%%QUEUE_NAME%%~$QUEUE_NAME~" \
         -e "s~%%WWWHOME%%~$LARAVEL_HOME~" \
+        -e "s~%%SLEEP_TIME%%~$SLEEP_TIME" \
+        -e "s~%%NUM_RETRIES%%~$RETRIES" \
 		/etc/supervisor/conf.d/laravel-worker.conf.tpl > /etc/supervisor/supervisord.conf
 fi
 
@@ -27,6 +29,8 @@ if [ "$LARAVEL_HORIZON" = true ]; then
 	sed -e "s~%%QUEUE_CONNECTION%%~$QUEUE_CONNECTION~" \
 		-e "s~%%QUEUE_NAME%%~$QUEUE_NAME~" \
         -e "s~%%WWWHOME%%~$LARAVEL_HOME~" \
+        -e "s~%%SLEEP_TIME%%~$SLEEP_TIME" \
+        -e "s~%%NUM_RETRIES%%~$RETRIES" \
 		/etc/supervisor/conf.d/laravel-horizon.conf.tpl > /etc/supervisor/supervisord.conf
 fi
 
