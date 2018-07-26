@@ -18,6 +18,6 @@ If you want to use [Laravel Horizon](https://laravel.com/docs/5.6/horizon) then 
 
 | php | docker image |
 | --- | ------------ |
-| 7.0 | ipunktbs/laravel-queue-worker:php7.0-v1.1 |
-| 7.1 | ipunktbs/laravel-queue-worker:php7.1-v2.1 |
-| 7.2 | ipunktbs/laravel-queue-worker:php7.2-v3.1 |
+| 7.0 | ipunktbs/laravel-queue-worker:php7.0-v1.4 |
+| 7.1 | ipunktbs/laravel-queue-worker:php7.1-v2.4 |
+| 7.2 | ipunktbs/laravel-queue-worker:php7.2-v3.4 |
