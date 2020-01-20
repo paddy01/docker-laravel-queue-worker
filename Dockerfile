@@ -5,16 +5,22 @@ LABEL maintainer="Patrik Forsberg <patrik.forsberg@ip-only.se>" \
 		version.php=$PHP_VERSION \
 		description="A supervisor configured to run with laravel artisan queue:work or artisan horizon command"
 
+ARG QUEUE_CONNECTION="redis"
+ARG QUEUE_NAME="default"
+ARG QUEUE_SLEEP_TIME=3
+ARG QUEUE_RETRIES=3
+ARG LARAVEL_HOME="/var/www"
+
 ENV PYTHON_VERSION=2
 ENV PY_PIP_VERSION=2
 ENV SUPERVISOR_VERSION=3.3.3
 
-ENV QUEUE_CONNECTION=redis
-ENV QUEUE_NAME=default
-ENV SLEEP_TIME=3
-ENV RETRIES=3
+ENV QUEUE_CONNECTION=${QUEUE_CONNECTION}
+ENV QUEUE_NAME=${QUEUE_NAME}
+ENV SLEEP_TIME=${QUEUE_SLEEP_TIME}
+ENV RETRIES=${QUEUE_RETRIES}
 ENV LARAVEL_HORIZON=false
-ENV LARAVEL_HOME="/var/www"
+ENV LARAVEL_HOME=${LARAVEL_HOME}
 
 # Install pdo if you want to use database queue
 RUN docker-php-ext-install pdo pdo_mysql pcntl posix
