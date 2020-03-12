@@ -1,7 +1,7 @@
-FROM php:7.2-alpine
+FROM php:7.4-alpine
 
 LABEL maintainer="Patrik Forsberg <patrik.forsberg@ip-only.se>" \
-		version.image="v3.5" \
+		version.image="v7.4" \
 		version.php=$PHP_VERSION \
 		description="A supervisor configured to run with laravel artisan queue:work or artisan horizon command"
 

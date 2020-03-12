@@ -13,6 +13,8 @@ The default queue name in laravel is called `default`. So we configured the `QUE
 
 If you want to use [Laravel Horizon](https://laravel.com/docs/5.6/horizon) then you have to set the environment `LARAVEL_HORIZON` to `true`. By default it is `false`.
 
+## Changes
+From now on each php version will have it's own version branch starting at 1.0.0
 
 ## Docker Images
 
@@ -21,3 +23,4 @@ If you want to use [Laravel Horizon](https://laravel.com/docs/5.6/horizon) then 
 | 7.0 | ipunktbs/laravel-queue-worker:php7.0-v1.4 |
 | 7.1 | ipunktbs/laravel-queue-worker:php7.1-v2.4 |
 | 7.2 | ipunktbs/laravel-queue-worker:php7.2-v3.4 |
+| 7.4 | ipunktbs/laravel-queue-worker:php7.4-v1.0.0 |
